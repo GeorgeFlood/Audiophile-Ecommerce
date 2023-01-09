@@ -2,8 +2,12 @@ import "../tailwind.css";
 import Logo from "../assets/shared/desktop/logo.svg";
 import Cart from "../assets/shared/desktop/icon-cart.svg";
 import BurgerMenu from "../assets/shared/tablet/icon-hamburger.svg";
-import HeadPhonesIcon from "../assets/shared/mobile/image-xx99-mark-one-headphones.jpg";
-import IconArrowRight from "../assets/shared/desktop/icon-arrow-right.svg";
+import HeadPhonesIcon from "../assets/shared/desktop/image-category-thumbnail-headphones.png";
+import SpeakersIcon from "../assets/shared/desktop/image-category-thumbnail-speakers.png";
+import EarphoneIcon from "../assets/shared/desktop/image-category-thumbnail-earphones.png";
+
+import ProductCard from "../components/ProductCard";
+
 const Index = function () {
   return (
     <div>
@@ -39,59 +43,10 @@ const Index = function () {
         </div>
       </header>
 
-      <section className="mt-16 px-5">
-        <div className="border-5 border-red-200 bg-slate-200 rounded relative mb-10">
-          <img src={HeadPhonesIcon} alt="xx99 mark one" />
-          <h3 className="text-center font-bold">HEADPHONES</h3>
-          <div className="py-4 flex justify-center align-center">
-            <p className="text-center px-2 text-slate-500 weight-light cursor-pointer">
-              SHOP
-            </p>
-            <img
-              src={IconArrowRight}
-              alt="arrow-right"
-              height="10"
-              width="10"
-              className="cursor-pointer"
-            ></img>
-          </div>
-        </div>
-
-        <div className="border-5 border-red-200 bg-slate-200 rounded relative mb-10">
-          <img src={HeadPhonesIcon} alt="xx99 mark one" />
-
-          <h3 className="text-center font-bold">SPEAKERS</h3>
-          <div className="py-4 flex justify-center align-center">
-            <p className="text-center px-2 text-slate-500 weight-light cursor-pointer">
-              SHOP
-            </p>
-            <img
-              src={IconArrowRight}
-              alt="arrow-right"
-              height="10"
-              width="10"
-              className="cursor-pointer"
-            ></img>
-          </div>
-        </div>
-
-        <div className="border-5 border-red-200 bg-slate-200 rounded relative mb-10">
-          <img src={HeadPhonesIcon} alt="xx99 mark one" />
-
-          <h3 className="text-center font-bold">EARPHONES</h3>
-          <div className="py-4 flex justify-center align-center">
-            <p className="text-center px-2 text-slate-500 weight-light pointer-cursor">
-              SHOP
-            </p>
-            <img
-              src={IconArrowRight}
-              alt="arrow-right"
-              height="10"
-              width="10"
-              className="cursor-pointer"
-            ></img>
-          </div>
-        </div>
+      <section className="mt-24 px-5">
+        <ProductCard productName="HEADPHONES" productImage={HeadPhonesIcon} />
+        <ProductCard productName="SPEAKERS" productImage={SpeakersIcon} />
+        <ProductCard productName="EARPHONES" productImage={EarphoneIcon} />
       </section>
     </div>
   );
